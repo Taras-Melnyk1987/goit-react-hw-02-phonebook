@@ -7,7 +7,7 @@ import {
   SpanName,
   SpanNumber,
 } from './Contacts.styled';
-import Button from '../Button';
+import Button from '../Button/Button';
 
 export default function Contacts({ list, onDeleteContact }) {
   return (

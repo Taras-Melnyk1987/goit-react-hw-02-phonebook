@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import Form from './Form';
-import Contacts from './Contacts';
-import Section from './Section';
-import Filter from './Filter';
+import Form from './Form/Form';
+import Contacts from './Contacts/Contacts';
+import Section from './Section/Section';
+import Filter from './Filter/Filter';
 import styled from 'styled-components';
 import { nanoid } from 'nanoid';
 

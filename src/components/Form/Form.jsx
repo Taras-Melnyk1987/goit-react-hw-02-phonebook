@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Button from '../Button';
+import Button from '../Button/Button';
 import { Input, FormField, AppForm, Label } from './Form.styled';
 import { nanoid } from 'nanoid';
 
