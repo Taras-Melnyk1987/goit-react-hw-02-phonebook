@@ -6,6 +6,7 @@ import Section from './Section/Section';
 import Filter from './Filter/Filter';
 import styled from 'styled-components';
 import { nanoid } from 'nanoid';
+import { Notify } from 'notiflix';
 
 const PhonebookApp = styled.div`
   margin: 25px auto;
@@ -28,7 +29,13 @@ export default class App extends Component {
   };
 
   handleFormContact = ({ name, number }) => {
+    const contactToAdd = this.checkName(name);
     const editedNumber = this.numberFormatting(number);
+
+    if (contactToAdd) {
+      Notify.warning(`${name} is already in contacts`);
+      return;
+    }
 
     const contact = {
       id: nanoid(),
@@ -37,6 +44,7 @@ export default class App extends Component {
     };
 
     this.setState(({ contacts }) => ({ contacts: [contact, ...contacts] }));
+    Notify.succes(`Contact ${name} was added!`);
   };
 
   handleFilterReset = () => {
