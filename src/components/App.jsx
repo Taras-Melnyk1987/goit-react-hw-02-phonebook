@@ -44,7 +44,7 @@ export default class App extends Component {
     };
 
     this.setState(({ contacts }) => ({ contacts: [contact, ...contacts] }));
-    Notify.succes(`Contact ${name} was added!`);
+    Notify.success(`Contact ${name} was added!`);
   };
 
   handleFilterReset = () => {

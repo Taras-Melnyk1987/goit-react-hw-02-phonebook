@@ -26,7 +26,7 @@ const Filter = ({ value, onChange, onClick }) => {
 };
 
 Filter.propType = {
-  value: PropTypes.string,
+  value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   onClick: PropTypes.func.isRequired,
 };
